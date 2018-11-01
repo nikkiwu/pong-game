@@ -6,9 +6,15 @@
 	</head>
 	<body>
 		<div class="game-wrapper">
-			<h1>Pong</h1>
+			<h1>Ping Pong</h1>
 			<div id="game"></div>
-			<!-- Rough-out your SVG mark-up here to start... -->
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="512" height="256">
+                <rect class="rectangle"  width="512" height="256" fill="white"  stroke="#000000" stroke-width="5"/>
+                <rect x="5" y="100" width="8" height="56"></rect>
+                    <rect x="500" y="100" width="8" height="56"></rect>
+                <circle class="circle" cx="256" cy="128" r="8" fill="#1072c6" stroke="black" stroke-width="2"/>
+                <line x1="256" y1="18" x2="256" y2="250" stroke="black" stroke-width="5" stroke-dasharray="20"></line>
+            </svg>
 		</div>
 		<script type="text/javascript" src="build/bundle.js"></script>
 	</body>
