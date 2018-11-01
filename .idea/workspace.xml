@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0fb6e4f-818d-4aa0-84e0-d2f6388ea6c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/partials/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/Game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/settings.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,7 +45,7 @@
         <counts>
           <entry key="css" value="13" />
           <entry key="html" value="611" />
-          <entry key="js" value="1895" />
+          <entry key="js" value="1969" />
           <entry key="json" value="31" />
         </counts>
       </usages-collector>
@@ -55,7 +54,7 @@
           <entry key="CSS" value="13" />
           <entry key="HTML" value="611" />
           <entry key="JSON" value="31" />
-          <entry key="JavaScript" value="1895" />
+          <entry key="JavaScript" value="1969" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -103,8 +102,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/partials/Game.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
-                  <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+                <state relative-caret-position="385">
+                  <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
                   </folding>
@@ -250,12 +249,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541088591822</updated>
-      <workItem from="1541088595060" duration="10402000" />
+      <workItem from="1541088595060" duration="10675000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10402000" />
+    <option name="totallyTimeSpent" value="10675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -372,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/partials/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        <state relative-caret-position="385">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
