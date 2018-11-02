@@ -1,13 +1,14 @@
-import {SVG_NS} from '../settings';
+import { SVG_NS } from '../settings';
 
 export default class Paddle {
+
     constructor(boardHeight, width, height, x, y, up, down) {
         this.boardHeight = boardHeight;
         this.width = width;
         this.height = height;
         this.x = x;
         this.y = y;
-        this.speed = 10;
+        this.speed = 30;
         this.score = 0;
 
         document.addEventListener('keydown', event => {
@@ -20,33 +21,39 @@ export default class Paddle {
                     break;
             }
         });
-    } // End of Constructor
 
-    up(){
-        this.y = this.y - this.speed;
-        this.y = Math.max(this.y, 0);
+    }// constructor
 
-
+    up() {
+        // get the max number...
+        // either 0 or the y position minus speed
+        this.y = Math.max( 0, this.y - this.speed );
     }
 
-    down(){
-        this.y = this.y + this.speed;
-        this.y = Math.min(this.y, 256 - this.height);
+    down() {
+        // get the min number...
+        // either the height of the board minus the height of the paddle
+        // or the y position plus the speed
+        this.y = Math.min( this.boardHeight - this.height, this.y + this.speed );
+    }
 
-
+    coordinates(x, y, width, height) {
+        let leftX = x;
+        let rightX = x + width;
+        let topY = y;
+        let bottomY = y + height;
+        return [leftX, rightX, topY, bottomY];
     }
 
 
-
-    render (svg) {
+    render(svg) {
         let rect = document.createElementNS(SVG_NS, 'rect');
         rect.setAttributeNS(null, 'fill', 'black');
         rect.setAttributeNS(null, 'width', this.width);
         rect.setAttributeNS(null, 'height', this.height);
-        rect.setAttributeNS(null, 'x', this.x);
-        rect.setAttributeNS(null, 'y', this.y);
+        rect.setAttributeNS(null, 'x', this.x); // x of the top left corner
+        rect.setAttributeNS(null, 'y', this.y); // y of the top left corner
         svg.appendChild(rect);
     }
 
 }
-
