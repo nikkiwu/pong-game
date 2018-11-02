@@ -12,8 +12,8 @@ export default class Game {
 
 		//Ball
         this.radius = 8;
-        this.boardHeight = 256;
-        this.boardWidth = 128;
+        this.boardHeight = this.height;
+        this.boardWidth = this.width;
 
 
 
@@ -44,11 +44,30 @@ export default class Game {
             KEYS.up,
             KEYS.down
 
+        );
+
+        // Player 3
+        this.player3 = new Paddle(
+            this.height,
+            this.paddleHeight,
+            this.paddleWidth,
+            (this.width + this.boardGap + this.paddleWidth),
+            ((this.width - this.paddleWidth) / 2),
 
 
         );
-	
-		this.gameElement = document.getElementById(this.element);
+
+        // Player 4
+        this.player4 = new Paddle(
+            this.height,
+            this.paddleHeight,
+            this.paddleWidth,
+            (this.width + this.boardGap + this.paddleWidth),
+            ((this.width - this.paddleWidth) / 2),
+
+        );
+
+        this.gameElement = document.getElementById(this.element);
         this.board = new Board(this.width, this.height);
         this.ball = new Ball(this.radius, this.boardHeight, this.boardWidth);
 
@@ -66,6 +85,8 @@ export default class Game {
         this.board.render(svg);
         this.player1.render(svg);
         this.player2.render(svg);
+        this.player3.render(svg);
+        this.player4.render(svg);
         this.ball.render(svg);
 	}
 
