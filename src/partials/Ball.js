@@ -7,7 +7,7 @@ export default class Ball {
         this.boardHeight = boardHeight;
         this.direction = 1;
         this.ping = new Audio('public/sounds/pong-01.wav');
-        this.ping2 = new Audio('public/sounds/pong-02.wav')
+        this.ping2 = new Audio('public/sounds/pong-04.wav');
         this.reset();
     }
 
@@ -93,9 +93,9 @@ export default class Ball {
             this.direction = -1;
         }
 
-        if (player1.score >= 3){
+        if (player1.score >= 10){
             this.reset();
-        }  else if (player2.score >= 3){
+        }  else if (player2.score >= 10){
             this.reset();
         }
 
