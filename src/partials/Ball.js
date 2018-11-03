@@ -76,7 +76,6 @@ export default class Ball {
     // Goal
     goal (player) {
           player.score ++;
-          this.ping2.play();
           this.reset();
     }
 
@@ -93,11 +92,6 @@ export default class Ball {
             this.direction = -1;
         }
 
-        if (player1.score >= 10){
-            this.reset();
-        }  else if (player2.score >= 10){
-            this.reset();
-        }
 
         this.vx += this.ax;
         this.vy += this.ay;

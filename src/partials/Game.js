@@ -3,6 +3,7 @@ import Paddle from './Paddle';
 import Ball from './Ball'
 import { SVG_NS, KEYS } from '../settings';
 import Score from './Score';
+import Winner from './Winner';
 
 export default class Game {
 
@@ -15,13 +16,18 @@ export default class Game {
 
         this.board = new Board(this.width, this.height);
         this.ball = new Ball(8, this.width, this.height);
-
-        // this.ball2 = new Ball(12, this.width, this.height);
-        // console.log(this.ball);
+        this.ball2 = new Ball(10, this.width, this.height);
 
         this.paddleWidth = 8;
         this.paddleHeight = 56;
         this.boardGap = 10;
+
+        //Winner
+
+        this.winner = new Winner (20, 120, 50);
+
+
+
 
         this.player1 = new Paddle(
             this.height,
@@ -46,23 +52,36 @@ export default class Game {
         );
 
 
-        this.score1 = new Score(this.width  / 2- 50, 30, 30);
-        this.score2 = new Score(this.width / 2 +  25, 30, 30);
+        this.score1 = new Score(this.width / 2 - 50, 30, 30);
+        this.score2 = new Score(this.width / 2 + 25, 30, 30);
 
         document.addEventListener('keydown', event => {
-            switch(event.key){
+            switch (event.key) {
                 case KEYS.spaceBar:
                     this.pause = !this.pause;
                     break;
             }
-        });
 
-    }// end of constructor
+
+        });
+    }
+
+
+    champion(svg, player) {
+        this.winner.render(svg, `${player} Wins!!!`);
+        this.pause = true;
+    }
+
+
+
+
+    // end of constructor
 
     render() {
 
         if(this.pause){
             return;
+
         }
 
         // be sure to empty out the last frame before re-rendering
@@ -80,12 +99,19 @@ export default class Game {
 
 
         this.ball.render(svg, this.player1, this.player2);
-        // this.ball2.render(svg);
+        this.ball2.render(svg, this.player1, this.player2);
+
 
 
 
         this.score1.render(svg, this.player1.score);
         this.score2.render(svg, this.player2.score);
+
+        if (this.player2.score === 3) {
+            this.champion(svg, 'Player 1')
+        } else if (this.player1.score === 3) {
+            this.champion(svg, 'Player 2')
+        }
     }
 
 }
