@@ -112,7 +112,7 @@ export default class Ball {
         circle.setAttributeNS(null, 'r', this.radius);
         circle.setAttributeNS(null, 'cx', this.x); // x of the centre point
         circle.setAttributeNS(null, 'cy', this.y); // y of the centre point
-        circle.setAttributeNS(null, 'fill', '#00FF5B');
+        circle.setAttributeNS(null, 'fill', '#ffc40c');
         svg.appendChild(circle);
 
     }

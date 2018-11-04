@@ -16,7 +16,8 @@ export default class Score {
         text.setAttributeNS(null, 'font-family', 'Silkscreen Web');
         text.setAttributeNS(null, 'x', this.x);
         text.setAttributeNS(null, 'y', this.y);
-        text.setAttributeNS(null, 'fill', 'black');
+        text.setAttributeNS(null, 'fill', 'white');
+        text.setAttributeNS(null, 'z-index', '99999');
         text.textContent = score;
         svg.appendChild(text);
     }
