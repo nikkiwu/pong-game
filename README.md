@@ -7,7 +7,7 @@ Recreating a famous pong game created in 1972 by Atari. With the basic pong func
 
 Use paddle to block and hit the ball to the opposite players goal line to gain a point.
 
-#ScreenShot
+# ScreenShot
 
 ![desktop](./public/screenshot/pongss.png)
 
@@ -39,7 +39,7 @@ Use paddle to block and hit the ball to the opposite players goal line to gain a
 **Pause Game:**
 * Space Bar
 
-##Technology Used
+## Technology Used
 
 * HTML5
 * CSS3
@@ -47,7 +47,7 @@ Use paddle to block and hit the ball to the opposite players goal line to gain a
 * JAVASCRIPT 
 * ES6 & ES.NEXT
 
-##Built With
+## Built With
 
 * WebStorm
 * Vim
@@ -56,7 +56,7 @@ Use paddle to block and hit the ball to the opposite players goal line to gain a
 * Chrome Developer Tools
 
 
-##Stretch Goals
+## Stretch Goals
 
 * Winner is declared with a message when total points is achieved.
 * Ball changes size depend on board hit.
