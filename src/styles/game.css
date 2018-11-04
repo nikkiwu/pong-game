@@ -71,6 +71,8 @@ html {
 }
 
 body {
+    position: relative;
+    background: #000;
   align-items: center;
   display: flex;
   font-family: 'Silkscreen Web', monotype;
@@ -79,8 +81,49 @@ body {
   width: 100%;
 }
 
+
+
+
 h1 {
+    color: #ffff;
   font-size: 2.5rem;
   margin-bottom: 1rem; 
   text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+p{
+    line-height: 3;
+    color: red;
+    font-size:  20px;
+}
+p:nth-child(odd){
+    color: blue;
+}
+
+
+.player1{
+    display: inline-block;
+}
+
+
+
+.p1{
+    color: blue;
+    top: 38%;
+    right: 22%;
+    position: absolute;
+    z-index: 9999;
+    transform: rotate(90deg);
+}
+.p2{
+    color: red;
+    top: 38%;
+    left: 22%;
+    position: absolute;
+    z-index: 99999;
+    transform: rotate(-90deg);
 }

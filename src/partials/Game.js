@@ -5,6 +5,7 @@ import { SVG_NS, KEYS } from '../settings';
 import Score from './Score';
 import Winner from './Winner';
 
+
 export default class Game {
 
     constructor(element, width, height) {
@@ -22,9 +23,12 @@ export default class Game {
         this.paddleHeight = 56;
         this.boardGap = 10;
 
+
         //Winner
 
-        this.winner = new Winner (20, 120, 50);
+        this.winner = new Winner (90, 120, 25);
+
+
 
 
 
@@ -52,6 +56,7 @@ export default class Game {
         );
 
 
+
         this.score1 = new Score(this.width / 2 - 50, 30, 30);
         this.score2 = new Score(this.width / 2 + 25, 30, 30);
 
@@ -67,10 +72,11 @@ export default class Game {
     }
 
 
-    champion(svg, player) {
-        this.winner.render(svg, `${player} Wins!!!`);
+    champ(svg, player) {
+        this.winner.render(svg, `${player} is the winner`);
         this.pause = true;
     }
+
 
 
 
@@ -107,10 +113,10 @@ export default class Game {
         this.score1.render(svg, this.player1.score);
         this.score2.render(svg, this.player2.score);
 
-        if (this.player2.score === 3) {
-            this.champion(svg, 'Player 1')
-        } else if (this.player1.score === 3) {
-            this.champion(svg, 'Player 2')
+        if (this.player2.score === 10) {
+            this.champ(svg, 'Player 1')
+        } else if (this.player1.score === 10) {
+            this.champ(svg, 'Player 2')
         }
     }
 

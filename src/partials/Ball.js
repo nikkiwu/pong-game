@@ -5,11 +5,14 @@ export default class Ball {
         this.radius = radius;
         this.boardWidth = boardWidth;
         this.boardHeight = boardHeight;
-        this.direction = 1;
+        this.direction = 2;
         this.ping = new Audio('public/sounds/pong-01.wav');
         this.ping2 = new Audio('public/sounds/pong-04.wav');
         this.reset();
     }
+
+
+
 
 
 
@@ -51,9 +54,10 @@ export default class Ball {
                 (this.x + this.radius <= rightX) &&
                 (this.y + this.radius >= topY && this.y - this.radius <= bottomY)
             ){
+
+                this.radius = 2;
                 this.vx *= -1;
                 this.ping.play();
-                // this.vx = -this.vx;
             }
 
         } else {
@@ -66,6 +70,7 @@ export default class Ball {
                 (this.x - this.radius <= rightX) &&
                 (this.y + this.radius >= topY && this.y - this.radius <= bottomY)
             ){
+                this.radius = 10;
                 this.vx *= -1;
                 this.ping.play();
                 // this.vx = -this.vx;
@@ -107,7 +112,7 @@ export default class Ball {
         circle.setAttributeNS(null, 'r', this.radius);
         circle.setAttributeNS(null, 'cx', this.x); // x of the centre point
         circle.setAttributeNS(null, 'cy', this.y); // y of the centre point
-        circle.setAttributeNS(null, 'fill', '#677a73');
+        circle.setAttributeNS(null, 'fill', '#00FF5B');
         svg.appendChild(circle);
 
     }
