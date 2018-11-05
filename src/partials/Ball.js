@@ -55,7 +55,7 @@ export default class Ball {
                 (this.y + this.radius >= topY && this.y - this.radius <= bottomY)
             ){
 
-                this.radius = 2;
+                this.radius = Math.floor(Math.random() * 15) + 3;
                 this.vx *= -1;
                 this.ping.play();
             }
@@ -70,7 +70,7 @@ export default class Ball {
                 (this.x - this.radius <= rightX) &&
                 (this.y + this.radius >= topY && this.y - this.radius <= bottomY)
             ){
-                this.radius = 10;
+                this.radius = Math.floor(Math.random() * 15) + 3;
                 this.vx *= -1;
                 this.ping.play();
                 // this.vx = -this.vx;
